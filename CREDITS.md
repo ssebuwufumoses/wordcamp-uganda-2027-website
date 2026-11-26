@@ -12,9 +12,9 @@
 
 The WordCamp Uganda 2027 organising team reviewed the site and suggested improvements throughout the build.
 
-- Stephen Dumba  ([@stephendumba1](https://profiles.wordpress.org/stephendumba1)
+- Stephen Dumba ([@stephendumba1 on WordPress.org](https://profiles.wordpress.org/stephendumba1/))
 - Kasirye Arthur ([@kasiryelabs](https://github.com/kasiryelabs))
-- Joan Logose    ([@njoan](https://profiles.wordpress.org/njoan/))
+- Joan Logose ([@njoan on WordPress.org](https://profiles.wordpress.org/njoan/))
 - Sheba Ayinzabyonna ([@Sheba-Ayinzabyonna](https://github.com/Sheba-Ayinzabyonna))
 - Moses Cursor Ssebunya ([@Successfulsebunya](https://github.com/Successfulsebunya))
 
