@@ -18,6 +18,7 @@ I built the site on the official WordCamp.org platform with the WordPress block 
 | [`src/styles/global-styles.json`](src/styles/global-styles.json) | Global Styles: palette, fonts, element and block styles |
 | [`src/styles/custom.css`](src/styles/custom.css) | Additional CSS from Global Styles, labelled by section |
 | [`package.json`](package.json), [`.stylelintrc.json`](.stylelintrc.json) | CSS checks with the official WordPress stylelint config (`npm run lint:css`) |
+| [`.github/`](.github/) | Security policy, pull request template, and the CSS check that runs on every pull request |
 
 The files in `src/` are exports. The live site is the source of truth: changes are made in the Site Editor, then exported here.
 

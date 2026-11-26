@@ -43,7 +43,7 @@ The files in `src/` are exports of the live site. After a change on the site:
 The CSS follows the [WordPress CSS coding standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/), checked with the official `@wordpress/stylelint-config`.
 
 ```bash
-npm install
+npm ci
 npm run lint:css        # check
 npm run lint:css:fix    # fix formatting automatically
 ```
@@ -52,6 +52,8 @@ The config (`.stylelintrc.json`) changes three rules:
 
 - `selector-class-pattern` is off, because the CSS has to target WordPress core and plugin class names such as `wp-block-button__link`, which don't follow the lowercase-hyphen pattern.
 - `no-descending-specificity` and `no-duplicate-selectors` are warnings. The remaining cases are a selector that also appears inside a longer selector group. Reordering them would change which rule wins, so they're left as they are.
+
+The same check runs automatically on every pull request that changes the CSS. Warnings don't fail it; errors do.
 
 ## Commit messages
 
