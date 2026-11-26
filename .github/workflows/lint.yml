@@ -1,0 +1,36 @@
+name: Lint CSS
+
+on:
+  pull_request:
+    paths:
+      - 'src/styles/**.css'
+      - '.stylelintrc.json'
+      - 'package.json'
+      - 'package-lock.json'
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/styles/**.css'
+      - '.stylelintrc.json'
+      - 'package.json'
+      - 'package-lock.json'
+
+permissions:
+  contents: read
+
+jobs:
+  stylelint:
+    name: Stylelint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run lint:css
