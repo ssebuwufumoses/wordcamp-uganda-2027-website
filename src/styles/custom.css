@@ -2301,7 +2301,7 @@ body:has(.wcu-org-pop[open]){overflow:hidden}
 /* Profile card: always fits the screen, never scrolls (photo shrinks, bio is capped) */
 .wcu-org-pop .wcu-drawer-panel{overflow:hidden}
 
-.wcu-org-pop .wcu-drawer-photo{min-height:96px}
+.wcu-org-pop .wcu-drawer-photo{min-height:96px;min-width:100%}
 
 .wcu-org-pop .wp-block-post-excerpt__excerpt{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:7;line-clamp:7;overflow:hidden}
 
