@@ -37,11 +37,9 @@ Jetpack → Performance & speed has two switches. Tested on 28 November 2026:
 | Setting | Effect | Keep it |
 | --- | --- | --- |
 | Images from Jetpack's network | Photos in page content are served from `i0.wp.com` as WebP, from the server nearest the visitor. Nothing looks different and every image loads | **On** |
-| Speed up static file load times | Core CSS and JavaScript come from `c0.wp.com`. The CSS needed before the page can show then sits on a second server, and mobile Performance dropped from the 90s to 79 (Largest Contentful Paint 5.7 s) | **Off** |
+| Speed up static file load times | Core CSS and JavaScript come from `c0.wp.com`, a second server | **Off** (one server fewer). Its effect on the score was inconclusive: with it off, mobile scored both 90 and 79 |
 
-With static files off again, mobile Performance went back to 90.
-
-Images inside template parts (the home page, header and footer) still come from the site itself. Jetpack only rewrites images in page content.
+Images inside template parts (the home page, header and footer) still come from the site itself, because Jetpack only rewrites images in page content. So neither switch changes the home page's images.
 
 ## What's left, and why it can't reach 100
 
@@ -59,7 +57,7 @@ Realistically, mobile tops out around 95–97 on this platform and desktop aroun
 ## Reading the score correctly
 
 - **The first test after a save is slow.** Saving a template, part or Global Styles clears the site's page cache, so the next visitor gets a freshly built page. A run straight after a save scored 71–79, and the same page scored 93–95 a minute later. Run the test twice and use the second result.
-- **Mobile moves a few points between runs** even when nothing changed, because PageSpeed simulates a slow phone on a slow network. 93, 95 and 96 on the same day is normal.
+- **Mobile moves a lot between runs** even when nothing changed, because PageSpeed simulates a slow phone on a slow network and bases that on how fast the server answered during the run. On 28 November 2026 the unchanged home page scored 79, 90, 93, 95 and 96 on mobile, while desktop scored 100. In the 79 runs the real timeline still showed the hero photo painting after about 1.2 seconds. Run the test three times and use the middle score.
 
 ## Keeping it fast
 
