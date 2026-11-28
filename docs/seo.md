@@ -35,6 +35,8 @@ Set in Jetpack settings, not on the page itself:
 
 They're used in titles, headings, descriptions and visible text where they read naturally, never stuffed. Google ignores meta keyword lists, and a page packed with keywords ranks lower, not higher.
 
+The home page **H1** is "WordCamp Uganda 2027", a small label above the big headline. The big headline ("A decade of WordPress community in Uganda") is an H2 with the same look, so the page's main heading carries the event name and there's still only one H1.
+
 **#WCUG** also appears on the page itself, in the hero next to the date and venue, because search engines weigh visible text more than meta tags.
 
 ## Getting into search results

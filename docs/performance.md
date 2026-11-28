@@ -26,6 +26,10 @@ Now the hero photo has `fetchpriority="high"` and every image below it has `load
 
 The hero photo is a WebP (`wordcamp-kampala-2026-hero.webp`) instead of a JPEG. The saving is small, because WordPress regenerates each size at its own quality setting.
 
+### 3. Photos were checked for compression
+
+Every photo on the home page was compared with a high-quality WebP (quality 85). Together they'd shrink only from about 830 KB to 686 KB, because they were already well compressed. That's not worth re-uploading and re-linking about 20 images, and bigger savings would mean lowering quality. New photos should be uploaded as WebP, about 1600px wide.
+
 ## What's left, and why it can't reach 100
 
 The remaining points are lost to files the platform loads on every WordCamp site:
