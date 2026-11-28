@@ -44,7 +44,7 @@ The home page **H1** is "WordCamp Uganda 2027", a small label above the big head
 Good titles don't help until Google has indexed the site. After launch, or after big changes:
 
 1. In Google Search Console (the site is already verified), use **URL Inspection → Request indexing** on the home page and the main pages.
-2. Submit the sitemap at `https://uganda.wordcamp.org/2027/wp-sitemap.xml`.
+2. Submit the sitemap `https://uganda.wordcamp.org/2027/sitemap.xml`. It's Jetpack's sitemap: `wp-sitemap.xml` doesn't exist on WordCamp.org. I submitted it on 28 November 2026. "Couldn't fetch" straight after submitting is normal, and Google retries on its own.
 3. Get links: WordCamp Central's announcement post, the Meetup pages, event listings and organisers' posts using #WCUG with a link to the site.
 
 ## Who built the site
