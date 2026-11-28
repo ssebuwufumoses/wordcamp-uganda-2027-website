@@ -30,6 +30,19 @@ The hero photo is a WebP (`wordcamp-kampala-2026-hero.webp`) instead of a JPEG. 
 
 Every photo on the home page was compared with a high-quality WebP (quality 85). Together they'd shrink only from about 830 KB to 686 KB, because they were already well compressed. That's not worth re-uploading and re-linking about 20 images, and bigger savings would mean lowering quality. New photos should be uploaded as WebP, about 1600px wide.
 
+### 4. Jetpack image delivery on, static files off
+
+Jetpack → Performance & speed has two switches. Tested on 28 November 2026:
+
+| Setting | Effect | Keep it |
+| --- | --- | --- |
+| Images from Jetpack's network | Photos in page content are served from `i0.wp.com` as WebP, from the server nearest the visitor. Nothing looks different and every image loads | **On** |
+| Speed up static file load times | Core CSS and JavaScript come from `c0.wp.com`. The CSS needed before the page can show then sits on a second server, and mobile Performance dropped from the 90s to 79 (Largest Contentful Paint 5.7 s) | **Off** |
+
+With static files off again, mobile Performance went back to 90.
+
+Images inside template parts (the home page, header and footer) still come from the site itself. Jetpack only rewrites images in page content.
+
 ## What's left, and why it can't reach 100
 
 The remaining points are lost to files the platform loads on every WordCamp site:
