@@ -2,7 +2,7 @@
 
 ## Built by
 
-- **Moses Ssebuwufu** (WordPress.org: [@ssebuwufumoses](https://profiles.wordpress.org/ssebuwufumoses/), GitHub: [@ssebuwufumoses](https://github.com/ssebuwufumoses)): design and build
+- **Moses Ssebuwufu** (WordPress.org: [@ssebuwufumoses](https://profiles.wordpress.org/ssebuwufumoses/), GitHub: [@ssebuwufumoses](https://github.com/ssebuwufumoses)), Website Team: designed and developed the WordCamp Uganda 2027 website
 
 ## Pattern artwork
 

@@ -12,7 +12,7 @@ I built the site on the official WordCamp.org platform with the WordPress block 
 | --- | --- |
 | [`docs/`](docs/) | How the site is built and how to work on it |
 | [`src/templates/`](src/templates/) | Block templates exported from the Site Editor |
-| [`src/parts/`](src/parts/) | Header and footer template parts |
+| [`src/parts/`](src/parts/) | Header, footer and the two home page template parts (Home – Hero, Home – Sections) |
 | [`src/patterns/`](src/patterns/) | Synced patterns used across pages |
 | [`src/navigation/`](src/navigation/) | Main menu (Navigation block) |
 | [`src/styles/global-styles.json`](src/styles/global-styles.json) | Global Styles: palette, fonts, element and block styles |
@@ -32,6 +32,7 @@ The files in `src/` are exports. The live site is the source of truth: changes a
 6. [SEO and social sharing](docs/seo.md): Jetpack SEO and share images
 7. [Accessibility](docs/accessibility.md): what's tested and how
 8. [Maintaining the site](docs/maintaining.md): how to make changes safely and export them here
+9. [Performance](docs/performance.md): PageSpeed scores, what changed, and what the platform limits
 
 ## Stack
 

@@ -4,7 +4,7 @@
 
 - Work in the Site Editor (Appearance → Editor) or the page editor. There are no theme files to edit.
 - Check if a block setting can do it before adding CSS.
-- Templates and template parts keep revisions, so a bad change can be rolled back.
+- Templates, template parts and Global Styles keep revisions, so a bad change can be rolled back. Use those and this repository as the backup. Don't keep backups as draft patterns: they pile up in the Patterns list (51 old ones were cleared out in November 2026).
 
 ## Editing Additional CSS safely
 
@@ -13,6 +13,7 @@ Additional CSS is stored inside Global Styles, together with the palette and fon
 - Edit it in **Site Editor → Styles → Additional CSS**. The editor saves the whole Global Styles object, which is safe.
 - If you update Global Styles through the REST API, always send the **full** `styles` and `settings` objects. Sending only `styles.css` replaces everything else and wipes the palette, fonts and element styles.
 - After saving, check that colours, headings and buttons still look right on the home page.
+- If a save sent only the CSS by mistake, restore the other values from **Global Styles revisions** (the REST route `/wp/v2/global-styles/<id>/revisions`), keeping the new CSS.
 - Add new rules under a labelled section comment, scoped to a `wcu-` class.
 
 ## Adding a section to a page
@@ -30,11 +31,28 @@ Additional CSS is stored inside Global Styles, together with the palette and fon
 - Every new page and post gets a Jetpack SEO title and description (see [seo.md](seo.md)).
 - Delete media that's no longer used.
 
+## Removing unused CSS and media
+
+Clean-ups only remove what can be proven unused, and nothing is saved until it's checked.
+
+**CSS**
+
+1. List every class the Additional CSS targets.
+2. Check each class against the public HTML of every page and against all stored content: pages, posts, templates, template parts, patterns, menus, and the organiser, speaker, session and sponsor entries. Count only classes on page elements, not text inside `<style>` tags (every page carries the CSS itself).
+3. Keep rules for things that only appear in some situations: CampTix checkout steps (`tix-`), the open mobile menu, form messages, hover and open states, organiser team archives and the related posts grid on single posts.
+4. Before saving, swap the cleaned CSS into test copies of the main pages at desktop and phone width and compare every element's computed style. Save only if nothing differs.
+
+**Media**
+
+1. An image is in use if its ID or file name appears in any stored content, featured image, site logo or icon, Global Styles, Jetpack settings or the public HTML of any page.
+2. Review the unused list before deleting. WordPress media has no trash, so deleting is permanent.
+3. Afterwards, load the main pages and check that every image still loads.
+
 ## Exporting changes to this repository
 
 The files in `src/` are exports of the live site. After a change on the site:
 
-1. Copy the updated template or part from the Site Editor (⋮ → Code editor) into the matching file in `src/`.
+1. Copy the updated template or part from the Site Editor (⋮ → Code editor) into the matching file in `src/`. Home page changes go in `src/parts/home-hero.html` or `src/parts/home-sections.html`.
 2. For Global Styles, copy Additional CSS into `src/styles/custom.css`. Update `global-styles.json` if the palette, fonts or element styles changed.
 3. Commit on a branch with a clear message, open a pull request and merge it.
 
