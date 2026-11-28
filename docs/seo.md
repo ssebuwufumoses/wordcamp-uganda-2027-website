@@ -16,15 +16,38 @@ The same description is used for social previews (Open Graph and X cards) when t
 
 ## Home page
 
-- **Title:** includes the dates and venue, so the preview shows them even before anyone clicks.
-- **Front page description:** set in Jetpack settings (`advanced_seo_front_page_description`).
+Set in Jetpack settings, not on the page itself:
+
+- **Title** (`advanced_seo_title_formats`, front page): `WordCamp Uganda 2027 (WCUG) | WordPress Uganda Tech Conference`. 62 characters, so it shows in full.
+- **Description** (`advanced_seo_front_page_description`): `#WCUG / WCUganda: the WordPress Uganda community’s tech conference, 12–13 March 2027 at Imperial Royale Hotel, Kampala. Talks, workshops and Contributor Day.` 157 characters.
 - **Share image:** `wordcamp-uganda-2027-share.jpg`, 2400×1260 (1.91:1), a photo with the event name, dates, venue and the pattern artwork band at the bottom. It's the home page's featured image, which Jetpack uses for `og:image`.
 
 ## Keywords
 
-WordCamp Uganda 2027, WordPress conference Uganda, WordPress Kampala, WordCamp Kampala, tech conference Uganda 2027, Contributor Day.
+| Keyword | Why |
+| --- | --- |
+| WordCamp Uganda | What most people type, usually without the year. Google matches it inside "WordCamp Uganda 2027" |
+| WCUG, #WCUG | Short form: WC for WordCamp, UG for Uganda. Also the event hashtag |
+| WCUganda | Another short form people search |
+| WordPress Uganda | People looking for the community, not only the event |
+| WordPress conference Uganda, tech conference Uganda, WordPress Kampala | People looking for tech events in Uganda |
+| Contributor Day | The second day |
 
-They're used in titles, headings and descriptions where they read naturally, never stuffed.
+They're used in titles, headings, descriptions and visible text where they read naturally, never stuffed. Google ignores meta keyword lists, and a page packed with keywords ranks lower, not higher.
+
+**#WCUG** also appears on the page itself, in the hero next to the date and venue, because search engines weigh visible text more than meta tags.
+
+## Getting into search results
+
+Good titles don't help until Google has indexed the site. After launch, or after big changes:
+
+1. In Google Search Console (the site is already verified), use **URL Inspection → Request indexing** on the home page and the main pages.
+2. Submit the sitemap at `https://uganda.wordcamp.org/2027/wp-sitemap.xml`.
+3. Get links: WordCamp Central's announcement post, the Meetup pages, event listings and organisers' posts using #WCUG with a link to the site.
+
+## Who built the site
+
+So search engines and AI tools can answer "who designed or developed the WordCamp Uganda website", the credit is public on the site's own domain. My organiser profile (`/organizer/moses-ssebuwufu/`) lists me in the **Website Team** and says I designed and developed the event website. [CREDITS.md](../CREDITS.md) says the same. There's no hidden text: Google treats text shown only to search engines as spam.
 
 ## Images
 

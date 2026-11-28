@@ -19,7 +19,7 @@ To find a component's CSS, search `custom.css` for its class name or its section
 
 | Component | Classes | What it does |
 | --- | --- | --- |
-| Hero | `wcu-hero-cover`, `wcu-hero-copy`, `wcu-hero-ghost` | Photo cover, date pill "12–13 March 2027", venue line, ticket and secondary buttons |
+| Hero | `wcu-hero-cover`, `wcu-hero-copy`, `wcu-hero-ghost` | Photo cover, date pill "12–13 March 2027", venue line, the #WCUG hashtag, ticket and secondary buttons. Lives in the **Home – Hero** template part (see [performance.md](performance.md)) |
 | The two days | `wcu-days-grid`, `wcu-day-card`, `wcu-stamp`, `wcu-stamp-photo` | Two postage-stamp cards with perforated edges and a postmark (decorative) |
 | Get involved | `wcu-way-mosaic`, `wcu-way`, `wcu-way-meta`, `wcu-way-link` | Photo mosaic. The whole card is the link |
 | Uniquely Uganda | `wcu-uniq`, `wcu-uniq-grid`, `wcu-uniq-tile`, `wcu-uniq-photo`, `wcu-uniq-link` | Travel tiles (visa, invitation letter, arrival, health, weather). Two per row on tablet, one on small phones |
@@ -34,9 +34,19 @@ To find a component's CSS, search `custom.css` for its class name or its section
 | Travel guides | (section "Travel guides") | Numbered steps, key-value lists, sticky side card |
 | Sponsorship packages | (section "Sponsorship packages v2", "Compare table") | Package cards with a ticket tear-line, add-on cards and a comparison table that scrolls sideways on phones |
 | Sponsors page | `wcu-sponsor-grid` | WordCamp Sponsors block shown as an open logo wall that matches the home page |
-| Organizers | `wcu-team-section`, `wcu-org-*` | Team grid with profile drawers made with `details`/`summary` (no JavaScript) |
+| Organizers | `wcu-team-section`, `wcu-org-*` | Team grid. The + on each tile opens a centred profile card made with `details`/`summary` (no JavaScript), see below |
 | Single organizer | `wcu-pass`, `wcu-pass-stage` | Profile shown as an event pass |
 | Blog cards | `wcu-post-grid`, `wcu-post-card`, `wcu-post-meta` | News archive cards |
+
+## Organizer profile card
+
+Each organiser tile is a core Details block (`wcu-org-pop`). Opening it shows the profile as a card in the middle of the screen.
+
+- **Backdrop:** the page dims behind the card. There is no blur, because a blurred page is tiring to look at.
+- **Closing:** the × sits on the card's own top-right corner (44px, with a white ring so it shows over any photo). Clicking the dimmed page also closes it.
+- **Size:** `--wcu-card-w` and `--wcu-card-top` set the card's width and distance from the top. The × uses the same two values, so it always lands on the card's corner.
+- **No scrolling inside the card:** on smaller screens the photo shrinks first and the bio is capped (7 lines, 5 under 640px high, 3 under 520px, 2 under 420px). On very short screens (phones in landscape) the photo and the small "Organizing team" label are hidden. "View full profile" is always visible.
+- **Tested at:** 1920×1080, 1536×735, 1366×768, 1280×600, 1024×768, 768×1024, 414×896, 375×667, 360×640, 320×568, 740×360 and 667×375.
 
 ## Decorative motifs
 
